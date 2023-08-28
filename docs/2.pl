@@ -20,5 +20,24 @@ print "Hello
 
 print "Hello\n"; # 双引号
 print 'Hello\n'; # 单引号
+print "\n\n";
 
 
+$str = << "eof";
+this is a note \n
+haha ha .
+eof
+print $str;
+
+$str = << 'eof';
+this is a note \n
+haha ha .
+eof
+print $str;
+
+
+$str = "http:// \\  \n";
+print $str;
+
+$str = "http:// \\\\  \n";
+print $str;
