@@ -34,10 +34,60 @@ print @array, "\n";
 print %data, "\n";
 
 # keys
-@names = keys %data;
+@names = keys(%data);
 print @names, "\n";
 
 # values
-@nums = values %data;
+@nums = values(%data);
 print @nums, "\n";
 
+# 4. 检测元素是否存在
+%data = (
+    'a' => 'apple',
+    'b' => 'banana',
+    'c' => 'Exist C'
+);
+if (exists($data{'c'})) {
+    print "$data{'c'}", "\n";
+}
+else {
+    print "doesn't exist", "\n";
+}
+
+# 5. 获取哈希大小
+%data = (
+    'a' => 'A',
+    'b' => 'B',
+    'c' => 'C'
+);
+@keys = keys(%data);
+$size = @keys;
+print("$size", "\n");
+
+# 6. 哈希中添加元素或删除元素
+%data = (
+    'a' => 'A',
+    'b' => 'B',
+    'c' => 'C'
+);
+print(%data, "\n");
+$data{'d'} = 'D';
+print(%data, "\n");
+if(exists($data{'a'})) {
+    $ret = delete($data{'a'});
+    print("\$ret = ", "$ret\n");
+}
+print(%data, "\n");
+
+# 7. 迭代哈希
+%data = (
+    'a' => 'A',
+    'b' => 'B',
+    'c' => 'C'
+);
+foreach $key (keys(%data)) {
+    print("$key\n");
+}
+while(($key, $value) = each(%data)) {
+    print("$data{$key}\n");
+}
