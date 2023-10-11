@@ -47,16 +47,3 @@ my %c = (
     'B' => 'e'
 );
 
-# #!/usr/bin/perl
-# use strict;
-use v5.10;
- 
-sub sum{
-  state $n = 0;
-  $n += 1;
-  print "现在一共调用此子程序$n次\n";
-};
- 
-&sum;
-&sum;
-&sum;
