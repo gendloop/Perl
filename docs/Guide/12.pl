@@ -46,4 +46,20 @@ my %c = (
     'A' => 'g',
     'B' => 'e'
 );
+transferList($a, @b, %c);
+print("\n");
+print("\n");
+
+# 子程序返回值
+sub add_x_y {
+    my $sum = $_[0] + $_[1];
+    return $sum;
+}
+print('1 + 2 = ', add_x_y(1, 2), "\n");
+print("\n");
+print("\n");
+
+# ● my	    局部变量
+# ● local	局部全局变量
+# ● state	静态变量 (需要加上 use feature 'state')
 
