@@ -1,0 +1,2 @@
+*.txt
+!docs/Guide/files/file.txt
