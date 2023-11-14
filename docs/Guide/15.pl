@@ -56,6 +56,7 @@ rename("files/file_copy.txt", "files/file_renamed.txt") or die "fail to rename f
 unlink("files/file_rw_app.txt");
 
 # 指定文件位置
+print('# 指定文件位置', "\n");
 
 open($fh, '+>>', "files/file_renamed.txt") or die "fail to open file: $! \n";
 
@@ -84,12 +85,24 @@ print("\n");
 
 # 获取文件信息
 
+print('# 获取文件信息', "\n");
+
 $file = "files/file.txt";
-my (@description, \
-    $is_b, $is_s, $is_\
-    )
+my (@description, $is_B, $is_s, $is_c);
+if(-e $file) {
+    push(@description, ('文件上一次被访问的时间: ' . (-A _)));
+    push(@description, ('是否是二进制文件: ' . ((-B _) ? 'T' : 'F'))) ;
+    push(@description, ('文件索引修改时间: ' . (-C _)));
+    push(@description, ('文件上一次修改时间: ' . (-M _)));
+    push(@description, ('是否是一个socket(套接字): ' . ((-S _) ? 'T' : 'F'))) ;
+    push(@description, ('是否是一个文本文件: ' . ((-T _) ? 'T' : 'F'))) ;
+    push(@description, ('是否是block-special(特殊块)文件(如挂载磁盘): ' . ((-b _) ? 'T' : 'F'))) ;
+    push(@description, ('是否是目录: ' . ((-d _) ? 'T' : 'F'))) ;
+    push(@description, ('文件或目录名是否存在: ' . ((-e _) ? 'T' : 'F'))) ;
+    push(@description, ('是否是普通文件: ' . ((-f _) ? 'T' : 'F'))) ;
+    push(@description, ('是否是符号链接: ' . ((-l $file) ? 'T' : 'F'))) ;
+    push(@description, ('文件或目录是否存在且不为0(返回字节数): ' . (-s $file)));
+    push(@description, ('是否为空文件: ' . ((-z $file) ? 'T' : 'F'))) ;
 
-
-
-
-
+    print(join("\n", @description), "\n");
+}
