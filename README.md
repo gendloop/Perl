@@ -1,6 +1,6 @@
 # Perl
 
-[Perl笔记](https://www.yuque.com/gendloop/learningnotes/aogwk8ll4877pomm) 
+Perl [学习笔记](https://www.yuque.com/gendloop/learningnotes/perl) 中的所有源代码
 
 ## Guide
 
