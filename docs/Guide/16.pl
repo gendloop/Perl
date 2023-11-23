@@ -69,7 +69,7 @@ print($fh 'bingou☀\n');
 close($fh);
 
 rmdir($new_dir) or print "error: fail to rmdir '$new_dir' \n";
-rmdir($new_dir2) or print "error: fail to rmdir '$new_dir2' \n";
+(rmdir($new_dir2) and print("rmdir $new_dir2", "\n")) or print "error: fail to rmdir '$new_dir2' \n";
 
 chdir($new_dir) or print "error: fail to chdir '$new_dir' \n";
 @files = glob("*");
