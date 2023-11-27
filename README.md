@@ -19,3 +19,5 @@ Perl [学习笔记](https://www.yuque.com/gendloop/learningnotes/perl) 中的所
 13. [引用](docs/Guide/13.pl) 
 14. 格式化输出
 15. [文件操作](docs/Guide/15.pl) 
+16. [目录操作](docs/Guide/16.pl) 
+17. [错误处理](docs/Guide/17.pl) 
