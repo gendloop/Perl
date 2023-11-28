@@ -63,7 +63,7 @@ $\ = "\n";
 print("1");
 print("2");
 print("3");
-$\ = "";
+$\ = undef;
 print("1");
 print("2");
 print("3");
