@@ -18,18 +18,57 @@ use warnings;
 print("\n", '# =~', "\n");
 my $str1 = "name: gendloop";
 if ($str1 =~ /name/) {
-    print("match: '$str1'", "\n");
+    print("match: 'gendloop'", "\n");
 }
-if($str1 =~ m/gendloop/) {
-    print("match: '$str1'", "\n");
+if($str1 !~ m/pooldneg/) {
+    print("match: 'pooldneg'", "\n");
 }
 
+# 三个特殊变量
+=pod
+$`  匹配部分的前一部分字符串
+$&  匹配的字符串
+$'  未匹配的剩余字符串
+=cut
+print("\n", '$` $& $\'', "\n");
+$str1 = "A_B_C";
+$str1 =~ "B";
+print("$`", "\n");
+print("$&", "\n");
+print("$'", "\n");
+
+# 模式匹配修饰符
+=pod
+i   忽略模式中的大小写
+x   忽略模式中的空白
+g   全局匹配. 查找所有匹配的模式，并在每次匹配后继续查找下一个匹配。
+=cut
+
+# i
+print("\n", 'i', "\n");
 $str1 = "Hello WoRlD, from a maniac";
 if($str1 =~ m/world/i) {
-    print("match: '$str1'", "\n");
+    print("match: '$&'", "\n");
 }
 else {
     print("match nothing", "\n");
+}
+
+# x
+print("\n", 'x', "\n");
+$str1 = "Line123";
+if($str1 =~ m/Line 1 2 3/x) {
+    print("match: '$&'", "\n");
+}
+else {
+    print("match nothing", "\n");
+}
+
+# g
+print("\n", 'g', "\n");
+$str1 = "Hi \tforeigner Hi\t gendloop";
+while($str1 =~ m/Hi[\s]+[a-z]+/g) {
+    print("match: '$&'", "\n");
 }
 
 

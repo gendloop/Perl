@@ -22,3 +22,4 @@ Perl [学习笔记](https://www.yuque.com/gendloop/learningnotes/perl) 中的所
 16. [目录操作](docs/Guide/16.pl) 
 17. [错误处理](docs/Guide/17.pl) 
 18. [特殊变量](docs/Guide/18.pl) 
+19. [正则表达式](docs/Guide/19.pl) 
