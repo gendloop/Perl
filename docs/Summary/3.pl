@@ -25,4 +25,3 @@ my @c = sort(f_bigger, @a);
 printL(@a);
 printL(@b);
 printL(@c);
-

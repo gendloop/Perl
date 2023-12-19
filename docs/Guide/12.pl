@@ -62,4 +62,3 @@ print("\n");
 # ● my	    局部变量
 # ● local	局部全局变量
 # ● state	静态变量 (需要加上 use feature 'state')
-

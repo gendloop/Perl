@@ -30,7 +30,7 @@ print("\n");
 # 赋值运算符
 $a = 2;
 $b = 4;
-$c = $a + $b; 
+$c = $a + $b;
 print($c, "\n");
 $c += $a;
 print($c, "\n");
@@ -126,4 +126,3 @@ print($a, "\n");
 print($c, "\n");
 print("\n");
 print("\n");
-

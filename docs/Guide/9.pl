@@ -153,4 +153,3 @@ LOOP2: do {
     $a = $a + 1;
 }while($a < 8);
 print("\n");
-

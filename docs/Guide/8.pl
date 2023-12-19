@@ -113,4 +113,3 @@ print("\n");
 # 三元运算符
 $ret = "Name" == "gendloop" ? "gendloop" : "guest";
 print("$ret\n");
-

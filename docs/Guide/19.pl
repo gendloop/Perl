@@ -112,8 +112,8 @@ print('\'', "1 2 3 \n 4 5 6 \n", '\' => \'', $str1, "\'\n");
 =pod
 字符替换
 tr/PARTTERN/REPLACEMENT/[MODIFIER]
-s   删除连续且相同的字符, 仅保留一个  
-c   转换所有未指定的字符 
+s   删除连续且相同的字符, 仅保留一个
+c   转换所有未指定的字符
 d   删除所有指定字符
 =cut
 
@@ -127,23 +127,16 @@ print("world", ' => ', $str1, "\n");
 print("\n", 's', "\n");
 $str1 = "gendloopgendloop";
 $str1 =~ tr/a-z/A-Z/s;
-print("gendloopgendloop", ' => ', $str1, "\n"); 
+print("gendloopgendloop", ' => ', $str1, "\n");
 
 # c
 print("\n", 'c', "\n");
 $str1 = "animal";
 $str1 =~ tr/a/A/c;
-print("animal", ' => ', $str1, "\n"); 
+print("animal", ' => ', $str1, "\n");
 
 # d
 print("\n", 'd', "\n");
 $str1 = "animal";
 $str1 =~ tr/a//d;
 print("\'animal", '\' => \'', $str1, "\'\n");
-
-
-
-
-
-
-

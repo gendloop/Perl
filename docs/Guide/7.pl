@@ -1,7 +1,7 @@
 # 哈希
 
 # 1. 创建哈希
-# method 1 
+# method 1
 %h1 = ('Person1', 'Maria', 'Person2', 'Jane');
 print %h1, "\n";
 print $h1{'Person2'}, "\n";

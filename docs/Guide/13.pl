@@ -9,7 +9,7 @@ my $hash_ref = \my %hash;     # 哈希
 my $func_ref = \&func;        # 函数
 # my $global_ref = \*global;    # GLOB句柄
 
-# 解引用 
+# 解引用
 # 已知类型 $$var @$ARRAY %$HASH
 # 不知类型 @{VAR}
 
@@ -53,4 +53,3 @@ my %hash2 = (
 );
 my $add_ref = \&add;
 &$add_ref(%hash2);
-
